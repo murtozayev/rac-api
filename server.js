@@ -8,7 +8,7 @@ dot.config()
 
 app.use(express.json({ limit: "50mb" }))
 app.use(express.urlencoded({ limit: "50mb", extended: false }))
-app.use(cors({ origin: "*" }))
+app.use(cors())
 
 app.post("/videos", async (req, res) => {
     const { video, title, description, like, likes, subs, subsc, category } = req.body
